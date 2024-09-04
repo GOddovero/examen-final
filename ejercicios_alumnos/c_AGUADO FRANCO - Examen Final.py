@@ -4,7 +4,6 @@ Edad: 40
 DNI: 30596753
 Email: franco@teconet.com.ar
 """
-import funciones_capo as fc
 
 #Objetivo del ejercicio: Arreglar los siguientes programas con errores:
 #Ejercicio 1: Saludar usuario.
@@ -15,6 +14,8 @@ print(f"Hola, {nombre_usuario}! Bienvenido!")
 
 #Ejercicio 2: Promedio de 4 numeros.
 #Cantidad errores: 5
+#Falta: El ejercicio pedia el promedio de 4 números, falto agregar uno mas y corregir la logica del promedio. 
+import funciones_capo as fc
 numero_1 = fc.ingresar_numero("Ingrese el primer número: ")
 numero_2 = fc.ingresar_numero("Ingrese el segundo número: ")
 numero_3 = fc.ingresar_numero("Ingrese el tercer número: ")
@@ -46,7 +47,7 @@ while True:
     lista_compras.append(item)
 
 print("Lista de compras:")
-for lista in lista_compras:
+for lista in lista_compras: #Falta: El ejercicio funciona perfectamente pero habia que usar el range con el len-> range(len(lista_compras))
     print("- " + lista)
 
 #Ejercicio 5: Clase Circulo.
@@ -67,7 +68,7 @@ mi_circulo.calcular_area()
 #Ejercicio 6: Generar un numero Aleatorio.
 #Cantidad de errores: 3
 
-import random # Esto deberia ir arriba , junto al otro random
+import random
 numero = random.randint (1,10)
 print(f"El número aleatorio generado es: {numero}")
 
@@ -79,7 +80,7 @@ vocales = "aeiou"
 contador = 0
 
 for letra in cadena:
-    if letra in vocales:
+    if letra in vocales: #Falta: la funcion .lower(), si hay una vocal mayuscula no la cuenta
         contador += 1
     else:
         continue
@@ -105,7 +106,7 @@ print(f"El texto repetido es: {repetir_cadena(texto, repeticiones)}")
 # Crea un metodo para saber si la persona es mayor o menor de edad.
 
 class Persona:
-    def __init__(self):
+    def __init__(self): #El ejercicio pedia pasarles estos datos por parametros ya que nos pide tres instancias de la clase persona, habia que crear 3 objetos
         nombre = input("Ingrese su nombre : ")
         edad = fc.ingresar_numero("Ingrese su edad : ")
         profecion = input("Ingrese su profecion : ")

@@ -15,6 +15,7 @@ print (f"Hola {nombre_usuario}! Bienvenido!")
 
 #Ejercicio 2: Promedio de 4 numeros. 
 #Cantidad errores: 5
+#Falta: Un numero completo, el ejercicio pedia el promedio de 4 números
 num1 = float(input("Ingrese el primer número: "))
 num2 = float(input("Ingrese el segundo número: "))
 num3 = float(input("Ingrese el tercer número: "))
@@ -45,10 +46,8 @@ while True:
 
 print("La Lista de compras es:c")
 
-for lista in lista_compras:
-    print("- " + {lista_compras})
-
-sin hacer - va el len ()
+for lista in lista_compras: #Falta: Funciona pero habia que usar el range
+    print("- " + {lista_compras}) #Falta: el print devuelve error, tenes que pasarle o bien lista o el indice de lista_compras[]
 
 
 
@@ -61,13 +60,13 @@ class Circulo:
 
 
     def calcular_area(self):
-        self.area = 3.14159 * (self.radio ** 2) #La formula matematica es Pi por Radio al cuadrado el "** 2" es cuadrado.
+        self.area = 3.14159 * (self.radio ** 2) #No hace falta poner self.area ya que area es una variable local.
         print(f"El área del círculo es: {self.area}")
 
         return  
 
 
-Circulo = Circulo(5)
+Circulo = Circulo(5) #Falta: el nombre de un objeto no puede llamarse igual que su clase, da lugar a errores. Deberia ser circulo o mi_circulo.
 Circulo.calcular_area()
 
 
@@ -122,7 +121,7 @@ class Persona:
     def datos (self):
         print(f"El nombre es {self.nombre}, su edad es {self.edad} años, y se dedica a ser {self.profesion}. ")
         
-    
+    #Falta: definir el metodo para saber si es mayor o menor de edad, la logica esta bien pero hay que hacerlo en un metodo.
     if edad >= 18:
         print ("La persona es mayor de edad.")
     else:

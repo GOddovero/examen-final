@@ -14,6 +14,7 @@ print(f"Hola, {nombre_usuario}! Bienvenido!")
 
 #Ejercicio 2: Promedio de 4 numeros. 
 #Cantidad errores: 5
+#Falta un numero completo, el ejercicio ingresar 4 números
 num1 = int(input("Ingrese el primer número: "))
 num2 = int(input("Ingrese el segundo número: "))
 num3 = int(input("Ingrese el tercer número: "))
@@ -73,7 +74,7 @@ print(f"El número aleatorio generado es: {numero}")
 #Cantidad errores: 4
 
 cadena = "Hola Mundo"
-vocales = ["a","e","i","o","u"]
+vocales = ["a","e","i","o","u"] #Esta bien, pero no hace faltä convertirlo a lista.
 contador = 0
 
 for letra in cadena:
@@ -101,7 +102,7 @@ print(f"El texto repetido es: {repetir_cadena(texto, repeticiones)}")
 # Crea un metodo para saber si la persona es mayor o menor de edad."""
 class Persona:
 
-def__init__(self, nombre, edad, profesion)
+def__init__(self, nombre, edad, profesion) #Falta: Esta mal identado y faltan los dos puntitos al final.
 self.nombre = nombre
 self.edad = edad
 self.profesion = profesion
@@ -109,5 +110,7 @@ self.profesion = profesion
 def imprimir(self):
     print(f"Nombre es {nombre}, edas es {edad}, profesion es {profesion}")
 
-gaspar = Persona(Gaspar, 23, Profesor)
-diego = Persona(Diego, 45, Desarrollador de software)
+gaspar = Persona(Gaspar, 23, Profesor) #Falta: Tanto Gaspar como profesor son cadenas de texto, hay que pasarlo como "Gaspar" y "Profesor"
+diego = Persona(Diego, 45, Desarrollador de software) #Falta: Tanto Gaspar como profesor son cadenas de texto, hay que pasarlo como "Diego" y "Desarrollador de software"
+#Falta una instancia
+#Falta el metodo para saber si es mayor o menor de edad.

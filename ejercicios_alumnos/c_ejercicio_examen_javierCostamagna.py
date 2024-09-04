@@ -15,6 +15,7 @@ print(f"Hola, {nombre_usuario}! Bienvenido!")
 
 #Ejercicio 2: Promedio de 4 numeros. 
 #Cantidad errores: 5
+#Falta un numero completo, el ejercicio pedia el promedio de 4 números.
 num1 = int(input("Ingrese el primer número: "))
 num2 = int(input("Ingrese el segundo número: "))
 num3 = int(input("Ingrese el tercer número: "))
@@ -45,7 +46,7 @@ while True:
         lista_compras.append(item)
 
 print(f"Lista de compras: {lista_compras}")
-for lista in lista_compras:
+for lista in lista_compras: #Falta: El ejercicio funciona perfectamente pero habia que usar el range con el len-> range(len(lista_compras))
     print(lista)
 
 #Ejercicio 5: Clase Circulo.
@@ -122,8 +123,9 @@ class Persona:
 
 persona1 = Persona("Gaspar", 23, "Profesor")
 persona2 = Persona("Diego", 45, "Desarrollador de Software")
-
-Persona.imprimir(persona1)
+#Falta: falta una persona, el ejercicio pedia 3 instancias
+#Falta: Funciona pero no es la manera correcta de usar los metodos de una clase, lo correcto es persona1.imprimir()
+Persona.imprimir(persona1) 
 Persona.mayor_edad(persona1)
 Persona.imprimir(persona2)
 Persona.mayor_edad(persona2)

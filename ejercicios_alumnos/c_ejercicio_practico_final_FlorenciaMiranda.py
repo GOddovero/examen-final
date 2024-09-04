@@ -9,13 +9,13 @@ Email:flopi1986@hotmail.com.ar
 
 #Ejercicio 1: Saludar usuario. 
 #Cantidad errores: 3
-NombreUsuario = input("Ingrese su nombre:" )
+NombreUsuario = input("Ingrese su nombre:" ) #Falta: el nombre de la variable no esta en snake_case.
 print(f"Hola, {NombreUsuario}! Bienvenido!")
 
 
 #Ejercicio 2: Promedio de 4 numeros. 
 #Cantidad errores: 5
-
+#Falta: un numero entero, el ejercicio pedia el promedio de 4 números.
 num1 = int (input("Ingrese el primer número: "))
 num2 = int (input("Ingrese el segundo número: "))
 num3 =int (input("Ingrese el tercer número: "))
@@ -56,7 +56,7 @@ class Circulo:
         self.radio = radio
 
     def calcular_area(self):
-        area = 3.14159 * (self.radio**2)
+        area = 3.14159 * (self.radio**2) #Muy bien los parentesis, pero no hacen falta ya que el orden de prioridad de las operaciones, primero se hace el exponente y despues la multiplicacion.
         return area
 Mi_circulo = Circulo(5)
 print(f"El área del círculo es:{Mi_circulo.calcular_area()}")
@@ -66,7 +66,7 @@ print(f"El área del círculo es:{Mi_circulo.calcular_area()}")
 #Cantidad de errores: 3
 import random
 numero = random.randint(1, 10)
-print("El número aleatorio generado es: " {numero})
+print("El número aleatorio generado es: " {numero}) #Falta: El print explota, falta agregar la f adelante y mover las comillas.
 
 #Ejercicio 7: Contar Vocales en una Cadena:
 #Cantidad errores: 4
@@ -79,7 +79,7 @@ for letra in cadena:
     if letra.lower() in vocales:
         contador += 1
 
-print("Número de vocales en la cadena:  {contador}")
+print("Número de vocales en la cadena:  {contador}") #Falta: esta mal el print, falta agregar la f adelante. print(f"Número de vocales en la cadena: {contador}")
 
 #Ejercicio 8: Funcion para repetir cadenas.
 #Cantidad de errores: 3
@@ -99,7 +99,7 @@ print(f"El texto repetido es: {repetir_cadena(texto,repeticiones)}")
 # Crea metodos para imprimir el nombre, la edad y la profesion de cada persona.
 # Crea un metodo para saber si la persona es mayor o menor de edad.
 
-class Persona():
+class Persona(): #Falta: Las clases no se declaran con (), es simplemente class Persona:
     def __init__(self,nombre,profesion,edad):
         self.nombre = nombre
         self.profesion = profesion
@@ -113,4 +113,6 @@ class Persona():
     def imprimir_profesion(self):
         print(f"la profesion es{self.profesion}")
         return
+    #Falta un metodo para saber si la persona es mayor de edad.
+    #Falta crear las tres instancias de la clase persona. (Gaspar, Diego y Tu Nombre)
 

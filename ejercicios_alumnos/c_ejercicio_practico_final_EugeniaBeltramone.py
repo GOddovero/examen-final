@@ -57,7 +57,7 @@ while True:
     
 
 print("Lista de compras:")
-for i in range(lista):
+for i in range(lista): #Funciona pero no hace falta agregar una variable auxiliar para almacenar el len de la lista_compras, podes hacerlo directamente en el range.
     print("- " + lista_compras[i])
 
 #Ejercicio 5: Clase Circulo.
@@ -80,7 +80,7 @@ print(f"El área del círculo es: { mi_circulo.calcular_area()}")
 #Cantidad de errores: 3
 import random
 
-numero = random.random ()
+numero = random.random () #Falta: No es random.random es random.randint(1,10).
 print(f"El número aleatorio generado es: +{numero}" )
 
 #Ejercicio 7: Contar Vocales en una Cadena:
@@ -130,7 +130,7 @@ class Persona:
         if self.edad >= 18: 
             print (f"{self.nombre} Es mayor de edad")
     
-        elif self.edad < 18: 
+        elif self.edad < 18: #No esta mal, pero con poner un else te evitabas pensar la logica del elif.
             print (f"{self.nombre} Es menor de edad")
             
         return

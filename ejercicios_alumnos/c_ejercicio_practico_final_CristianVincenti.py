@@ -3,7 +3,7 @@ Nombre y Apellido: CRISTIAN VINCENTI
 Edad: 48
 DNI: 24.878.390
 Correo electrónico: cristianvincenti@gmail.com
-
+"""
 
 #Objetivo del ejercicio: Arreglar los siguientes programas con errores:
 
@@ -19,7 +19,7 @@ num1  =  int(input ( "Ingrese el primer número: " ))
 num2  =  int(input ( "Ingrese el segundo número: " ))
 num3  =  int( input ( "Ingrese el tercer número: " ))
 num4  =  int(input ( "Ingrese el cuarto número: " ))
-PROMEDIO  =  float(num1  +  num2  +  num3 + num4) /  4
+PROMEDIO  =  float(num1  +  num2  +  num3 + num4) /  4 #Falta cambiar el nombre de la variable, en este momento promedio es una Constante ya que esta en mayusculas.
 print ( f"El promedio es: { PROMEDIO } " )
 
 
@@ -47,7 +47,7 @@ while True:
 print("Lista de compras:")
 for i in range(len(lista_compras)):
     print("- " + lista_compras[i])
- 
+
 
 
 #Ejercicio 5: Clase Círculo.
@@ -55,15 +55,15 @@ for i in range(len(lista_compras)):
 
 class  Circulo:
     def __init__(self)-> None:
-        self.radio = int(input(" Ingrese el alto: "))
+        self.radio = int(input(" Ingrese el alto: ")) #No es el alto, es el radio, esta mal el texto
     pass
 
     def  calcular_area ( self ):
-        area=  self.radio* 3.14159 **  2 
+        area=  self.radio* 3.14159 **  2 #Esta mal la formula del area, es pi(3.14159) por el radio al cuadrado
         return area   #La formula matematica es Pi por Radio al cuadrado el "** 2" es cuadrado.
 
 #print ( f"El área del círculo es: "  {calcular_area})
-    def caracterisca (self):
+    def caracterisca (self): #No hacia falta crear otro metodo para mostrar el area, si pones print(mi_circulo.calcular_area()) lo muestra
         print ( f"El área del círculo es:   {self.calcular_area()}")
 
 mi_circulo =  Circulo()
@@ -101,7 +101,7 @@ texto = input("Ingrese un texto: ")
 repeticiones = int(input("¿Cuántas veces desea repetir el texto? "))
 print(f"El texto repetido es: {repetir_cadena(texto, repeticiones)}")
 
-"""
+
 
 #Ejercicio 9: Crear una clase llamada Persona.
 #Crea tres instancias de la clase persona:
@@ -112,7 +112,7 @@ print(f"El texto repetido es: {repetir_cadena(texto, repeticiones)}")
 # Crea un método para saber si la persona es mayor o menor de edad.
 
 class Persona:
-    def __init__(self, nombre: str, edad: int, profesion: str, ) -> None:
+    def __init__(self, nombre: str, edad: int, profesion: str, ) -> None: #Excelente uso de decoradores
         self.nombre = nombre
         self.edad = edad
         self.profesion = profesion
@@ -120,7 +120,7 @@ class Persona:
     
 
     def mayor(self):
-        if self.edad > 18:
+        if self.edad > 18: #Falto el =, deberia ser >= 18 o bien > 17 ya que con 18 años sos mayor de edad.
             print(f" {self.nombre} es mayor de edad")
         else:
             print(" Es menor de edad")

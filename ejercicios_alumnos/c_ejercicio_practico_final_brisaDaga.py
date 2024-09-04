@@ -19,9 +19,9 @@ print(f"Hola, {nombreusuario} ! Bienvenido!")
 num1 = fp.ingresar_numero("Ingrese el primer número: ")
 num2 = fp.ingresar_numero("Ingrese el segundo número: ")
 num3 = fp.ingresar_numero("Ingrese el tercer número: ")
-num4 = fp.ingresar_numero("Ingrese el tercer número: ")
+num4 = fp.ingresar_numero("Ingrese el tercer número: ") #Esta mal el texto
 
-promedio = num1 + num2 + num3 + num4 / 3
+promedio = num1 + num2 + num3 + num4 / 3 #El promedio da mal, falta cambiar el 3 por un 4 en la division.
 print(f"El promedio es: {promedio}")
 
 #Ejercicio 3: Verificar si el estudiante aprobo:
@@ -31,7 +31,7 @@ calificacion = fp.ingresar_numero("Ingrese la calificación del estudiante: ")
 
 if calificacion >= 6:
     print(f"El estudiante ha aprobado con {calificacion}")
-if calificacion <= 6:
+if calificacion <= 6: #Esta mal la logica, no hace falta dos if ya que si el usuario saca 6 se comprueban ambas. Va un else.
     print(f"El estudiante ha reprobado con {calificacion}")
 
 
@@ -48,7 +48,7 @@ while True:
 
 
 print(f"Su lista de compras es {lista_compras}")
-for item in lista_compras:
+for item in lista_compras: #Falta: El ejercicio funciona perfectamente pero habia que usar el range, con el len para devolver el largo de la lista
     print(f"{lista_compras}")
 
 
@@ -64,7 +64,7 @@ class Circulo:
         self.area = area
 
     def calcular_area(self):
-         self.area = (3.14159 * self.radio) ** 2 #La formula matematica es Pi por Radio al cuadrado el "** 2" es cuadrado.
+         self.area = (3.14159 * self.radio) ** 2 #Esta mal la formula del area, no hace falta pasarle un self.area se puede usar una variable local.
          print(f"{self.area}")
 
 mi_circulo = Circulo(5)
@@ -86,23 +86,23 @@ cadena = "Hola Mundo"
 vocales = "aeiou"
 contador = 0
 
-for letra in cadena: #1
-    if letra  in vocales: #4
-        contador  += 1 #3
+for letra in cadena: 
+    if letra  in vocales: #Falta el .lower() si cambias la cadena y una vocal es mayuscula no la tendrá en cuenta.
+        contador  += 1 
 
-print(f"Número de vocales en la cadena: {contador}") #2
+print(f"Número de vocales en la cadena: {contador}") 
 
 #Ejercicio 8: Funcion para repetir cadenas.
 #Cantidad de errores: 3
 texto = input("Ingrese un texto: ")
 veces = fp.ingresar_numero("¿Cuántas veces desea repetir el texto? ")
-def repetir_cadena(cadena, veces):
+def repetir_cadena(cadena, veces): #No hay que pasarle cadena por parametro, hay que pasarle el texto
     veces = veces
     cadena = texto * veces
     print(f"El texto repetido es: {texto} y la cantidad de veces es {veces}")
-    return cadena
+    return cadena #
 
-repetir_cadena(veces)
+repetir_cadena(veces) #Falta un parametro, hay que pasarle el texto y poner la funcion en un print para que muestre el texto repetido
 repetir_cadena(cadena)
 
 #Ejercicio 9: Crear una clase llamada Persona.
@@ -125,7 +125,7 @@ class Mi_perona:
             print("Eres menor de edad") 
     def datos_completos(self):
         print(f"{self.nombre}, {self.edad},{self.profesion}")
-   
+
 
 yo = Mi_perona("Diego",44,"programador")
 yo.mayor_de_edad()
