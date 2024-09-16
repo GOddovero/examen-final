@@ -50,7 +50,7 @@ while True:
     lista_compras.append(item)
 
 print("Lista de compras:")
-for i in range.len((lista_compras)):
+for i in range.len((lista_compras)): #Falta: el len no es un metodo, es una funcion.
     print("- " + lista_compras[i])
 
 #Ejercicio 5: Clase Circulo.
@@ -58,21 +58,21 @@ for i in range.len((lista_compras)):
 #Cantidad de errores: 5
 
 class Circulo:
-    def init(self,radio):
+    def init(self,radio): #Falta el init esta mal declarado
         self.radio = radio
 
     def calcular_area(self):
         return 3.14159 * (self.radio ** 2) #La formula matematica es Pi por Radio al cuadrado el "** 2" es cuadrado.
 
 mi_circulo = Circulo(5)
-print(f"El área del círculo es: ", {mi_circulo.calcular_area()})
+print(f"El área del círculo es: ", {mi_circulo.calcular_area()}) #Falta esta mal formateado, si usas {} formatear el print con f adelante no con ,
 
 
 #Ejercicio 6: Generar un numero Aleatorio.
 #Salida esperada: El número aleatorio generado es: (un numero generado aleatoreamente)
 #Cantidad de errores: 3
 import random
-numero = random.randinit(1, 10)
+numero = random.randinit(1, 10) #Falta, es randomint no randinit
 print(f"El número aleatorio generado es: " , numero)
 
 #Ejercicio 7: Contar Vocales en una Cadena:
@@ -84,7 +84,7 @@ vocales = "aeiou"
 contador = 0
 
 for letra in cadena:
-    if letra.lower in vocales:
+    if letra.lower in vocales: #Falta: Lower es un metodo se declara asi: .lower()
         contador += 1
 
 print(f"Número de vocales en la cadena: " ,contador)
@@ -98,7 +98,7 @@ def repetir_cadena(cadena, veces):
 
 texto = input("Ingrese un texto: ")
 repeticiones =int(input("¿Cuántas veces desea repetir el texto? "))
-print(f"El texto repetido es: {repetir_cadena(repeticiones.texto)}")
+print(f"El texto repetido es: {repetir_cadena(repeticiones.texto)}") #Falta, no es .texto "es ,texto"
 
 #Ejercicio 9: Crear una clase llamada Persona.
 #Crea tres instancias de la clase persona:
@@ -134,7 +134,7 @@ persona_1=Persona("Gaspar", 23,"Profesor")
 persona_2=Persona("Diego", 45,"Desarrolador de software")
 persona_3=Persona("Pamela",36,"Estudiante")  
 
-imprimir.persona_1()
+imprimir.persona_1() #Falta: falta el metodo para imprimir.
 imprimir.persona_2()
 imprimir.persona_3()
 
